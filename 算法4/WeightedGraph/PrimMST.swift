@@ -12,7 +12,7 @@ class PrimMST {
     private var edgeTo: [Edge?]
     private var distTo: [Double]
     private var marked: [Bool]
-    private var pq = PQ()
+    private var pq = IndexMinPQ<Double>()
     
     var edges: [Edge] {
         return edgeTo.dropFirst().map { return $0! }
@@ -32,9 +32,9 @@ class PrimMST {
         marked = [Bool](repeating: false, count: G.V)
         
         distTo[0] = 0.0
-        pq.add((0, 0.0))
+        pq.insert((0, 0.0))
         while !pq.isEmpty {
-            visit(G, pq.pop())
+            visit(G, pq.delMin())
         }
     }
     
@@ -56,26 +56,24 @@ class PrimMST {
 //    }
 }
 
-class PQ {
-    private var items = [(Int, Double)]()
+class IndexMinPQ<Element: Comparable> {
+    private var items = [(Int, Element)]()
     var isEmpty: Bool {
         return items.isEmpty
     }
     
-    func add(_ item: (Int, Double)) {
+    func insert(_ item: (Int, Element)) {
         items.append(item)
-        items.sort { (lhs, rhs) -> Bool in
-            return lhs.1 < rhs.1
-        }
+        items.sort { return $0.1 < $1.1 }
     }
     
-    func pop() -> Int {
+    func delMin() -> Int {
         let minIndex = items[0].0
         items.remove(at: 0)
         return minIndex
     }
 
-    func update(_ item: (Int, Double)) {
+    func update(_ item: (Int, Element)) {
         if items.contains(where: { (key, _) -> Bool in
             return key == item.0
         }) {
@@ -84,7 +82,7 @@ class PQ {
             }!
             items[index] = item
         } else {
-            add(item)
+            insert(item)
         }
     }
 }

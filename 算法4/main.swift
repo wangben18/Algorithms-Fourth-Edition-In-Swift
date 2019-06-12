@@ -13,4 +13,4 @@ func file(named fileName: String) -> String {
     return try! String(contentsOf: dir.appendingPathComponent(fileName), encoding: .utf8)
 }
 
-WeightedGraphTest.main()
+WeightedDigraphTest.main()

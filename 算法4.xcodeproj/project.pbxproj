@@ -35,6 +35,7 @@
 		6096FFD5229D2D5F0047FC1F /* GraphTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6096FFD4229D2D5F0047FC1F /* GraphTest.swift */; };
 		6096FFD8229D2DBE0047FC1F /* TreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6096FFD7229D2DBE0047FC1F /* TreeTest.swift */; };
 		6096FFDA229D2F3E0047FC1F /* DepthFirstPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6096FFD9229D2F3E0047FC1F /* DepthFirstPaths.swift */; };
+		60C5D1F422B4F62100C2ED4E /* AcyclicLP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C5D1F322B4F62100C2ED4E /* AcyclicLP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +80,7 @@
 		6096FFD4229D2D5F0047FC1F /* GraphTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTest.swift; sourceTree = "<group>"; };
 		6096FFD7229D2DBE0047FC1F /* TreeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeTest.swift; sourceTree = "<group>"; };
 		6096FFD9229D2F3E0047FC1F /* DepthFirstPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthFirstPaths.swift; sourceTree = "<group>"; };
+		60C5D1F322B4F62100C2ED4E /* AcyclicLP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcyclicLP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				60780D2C22A8BFE40003EE75 /* EdgeWeightedDigraph.swift */,
 				60780D2E22AF810C0003EE75 /* DijkstraSP.swift */,
 				60780D4322AF9E550003EE75 /* AcyclicSP.swift */,
+				60C5D1F322B4F62100C2ED4E /* AcyclicLP.swift */,
 			);
 			path = WeightedDigraph;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				60780D0A229E827E0003EE75 /* SymbolGraph.swift in Sources */,
 				60780D0E229FC0930003EE75 /* Digraph.swift in Sources */,
 				60872FA3229526BA00D2C4BF /* BST.swift in Sources */,
+				60C5D1F422B4F62100C2ED4E /* AcyclicLP.swift in Sources */,
 				60780D2222A647220003EE75 /* EdgeWeightedGraph.swift in Sources */,
 				60780D2F22AF810C0003EE75 /* DijkstraSP.swift in Sources */,
 				60780D13229FCECD0003EE75 /* DirectedDFS.swift in Sources */,
